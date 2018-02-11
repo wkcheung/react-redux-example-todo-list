@@ -1,6 +1,9 @@
-const visibilityFilter = (state = 'SHOW_ALL', action) => {
+import {ADD_TODO, SET_VISIBILITY_FILTER, TOGGLE_TODO} from '../constants/actionTypes'
+import { VisibilityFilters } from '../constants/constants'
+
+const visibilityFilter = (state = VisibilityFilters.SHOW_ALL, action) => {
   switch (action.type) {
-    case 'SET_VISIBILITY_FILTER':
+    case SET_VISIBILITY_FILTER:
       return action.filter
     default:
       return state
