@@ -1,15 +1,15 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { addTodo } from '../actions'
+import { Button, Input } from 'semantic-ui-react'
 
 let AddTodo = ({ dispatch }) => {
-  let input
-
   return (
     <div>
       <form
         onSubmit={e => {
           e.preventDefault()
+		  const input = document.querySelector('input[name=todo]')
           if (!input.value.trim()) {
             return
           }
@@ -17,14 +17,10 @@ let AddTodo = ({ dispatch }) => {
           input.value = ''
         }}
       >
-        <input
-          ref={node => {
-            input = node
-          }}
-        />
-        <button type="submit">
+        <Input name='todo'/>
+        <Button type="submit">
           Add Todo
-        </button>
+        </Button>
       </form>
     </div>
   )

@@ -2,6 +2,7 @@ import React from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
+import './semantic/dist/semantic.min.css';
 import todoApp from './src/reducers'
 import App from './src/components/App'
 

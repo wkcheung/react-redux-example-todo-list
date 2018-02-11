@@ -1,21 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Button } from 'semantic-ui-react'
 
 const Link = ({ active, children, onClick }) => {
-  if (active) {
-    return <span>{children}</span>
-  }
-
   return (
-    <a
-      href=""
-      onClick={e => {
-        e.preventDefault()
-        onClick()
-      }}
+    <Button href=""
+		color={ active? 'blue' : null}
+		active={active}
+		onClick={e => {
+			e.preventDefault()
+			onClick()
+		}}
     >
       {children}
-    </a>
+    </Button>
   )
 }
 
