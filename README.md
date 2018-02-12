@@ -90,11 +90,7 @@ Redux architecture revolves around a **strict unidirectional data flow**.
     </tbody>
 </table>
 
-<<<<<<< HEAD
 ### Generating container components with the React Redux library's `connect()`
-=======
-## Generating container components with the React Redux library's `connect()`
->>>>>>> 626d02cb208d0af98f1d9782961a47d2ce8478c0
 
 To use `connect()`, you need to define a special function called `mapStateToProps` that tells how to transform the current Redux store state into the props you want to pass to a presentational component you are wrapping.
 
